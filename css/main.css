@@ -1,0 +1,451 @@
+:root {
+  --primary: #ff0000;
+  --secundary: #ff4d00;
+  --complementary: #443737;
+  --light: #e1e1e1;
+  --dark: #272121;
+  --fuente1: 'Oswald', sans-serif;;
+  --fuente2: 'Roboto Slab', serif;;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--fuente2);
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--complementary);
+}
+
+/** HEADER AND NAVBAR **/
+
+header {
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  background-color: var(--dark);
+  box-shadow: 0px 0px 24px 0px rgba(0,0,0,0.5);;
+  z-index: 1;
+}
+
+header .title-logo__container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+header .title-logo__container h1 {
+  font-family: var(--fuente1);
+  font-size: 2.8rem;
+  letter-spacing: 0.5rem;
+  color: var(--light);
+}
+
+header .title-logo__container span {
+  display: inline-block;
+  width: 54px;
+  text-align: center;
+}
+
+.navbar__container {
+  position: absolute;
+  top: 50px;
+  left: -100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60vw;
+  height: 100vh;
+  padding: 8px;
+  background-color: var(--complementary);
+  transition: left ease 1s;
+}
+
+.open {
+  left: 0;
+}
+
+.navbar__container--mobile {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 50%;
+  list-style: none;
+}
+
+.navbar__container--mobile li a {
+  font-size: 2.0rem;
+  text-decoration: none;
+  color: var(--light);
+}
+
+/** HERO SECTION **/
+
+main {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.hero__container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.hero__container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.5);
+}
+
+.hero__content {
+  position: absolute;
+  top: calc(50% - 225px);
+  left: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 80%;
+  max-width: 450px;
+  height: 450px;
+}
+
+.hero__container .hero__content h2 {
+  font-family: var(--fuente1);
+  font-size: 10rem;
+  color: var(--light);
+}
+
+.hero__container .hero__content p {
+  font-family: var(--fuente2);
+  font-size: 2.0rem;
+  color: var(--light);
+}
+
+.hero__container .hero__content a {
+  display: inline-block;
+  width: 150px;
+  padding: 8px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 15px;
+  font-family: var(--fuente2);
+  font-size: 1.8rem;
+  text-align: center;
+  text-decoration: none;
+  background-color: var(--primary);
+  color: var(--light);
+}
+
+/** ABOUT US-SECTION **/
+
+.about-us__container {
+  width: 100%;
+  height: auto;
+  margin-top: 50px;
+}
+
+.about-us__circle {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  background-color: var(--primary);
+  box-shadow: 0px 0px 24px 0px rgba(0,0,0,0.5);;
+}
+
+.circle__title {
+  position: absolute;
+  top: calc(50% - 30px);
+  left: calc(50% - 100px);
+  width: 200px;
+  height: 60px;
+  text-align: center;
+}
+
+.circle__title h2 {
+  font-family: var(--fuente1);
+  font-size: 4.0rem;
+  color: var(--light);
+}
+
+.about-us__info {
+  width: 90%;
+  max-width: 390px;
+  height: auto;
+  margin: 20px auto 40px auto;
+  text-align: center;
+}
+
+.about-us__info p {
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  color: var(--light);
+}
+
+.about-us__info hr {
+  width: 60%;
+  margin: 10px auto;
+}
+
+/** FRASE SECTION **/
+
+.sentence__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 400px;
+  margin: 0 auto 50px auto;
+  text-align: center;
+  background-image: url("../img/sentence-img.webp");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.sentence__content {
+  padding: 8px;
+  background-color: var(--primary);
+  opacity: .8;
+}
+
+.sentence__content h2 {
+  font-family: var(--fuente1);
+  font-size: 4.0rem;
+  text-transform: uppercase;
+  color: var(--light);
+}
+
+/** SPECIALS **/
+
+.specials__container {
+  width: 100%;
+  height: auto;
+}
+
+.specials__container h2 {
+  margin-bottom: 20px;
+  font-family: var(--fuente1);
+  font-size: 4.0rem;
+  text-align: center;
+  color: var(--light);
+}
+
+.specials-cards__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 316px;
+  margin-bottom: 50px;
+  overflow-x: scroll;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+}
+
+.specials-cards__container::-webkit-scrollbar {
+  display: none;
+}
+
+.special__card {
+  position: relative;
+  scroll-snap-align: center;
+  width: 70%;
+  min-width: 200px;
+  max-width: 250px;
+  height: 300px;
+  margin: 0 20px 0;
+  border-radius: 15px;
+  background-color: var(--dark);
+  box-shadow: 0px 0px 24px 0px rgba(0,0,0,0.5);
+  overflow: hidden;
+}
+
+.special__card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card__info {
+  position: absolute;
+  top: calc(50% - 20px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  background-color: var(--secundary);
+  opacity: .8;
+}
+
+.card__info p {
+  font-family: var(--fuente1);
+  font-size: 2.4rem;
+  color: var(--light);
+}
+
+/** MENU SECTION **/
+
+.menu__container {
+  width: 100%;
+  height: auto;
+}
+
+.menu__container h2 {
+  font-family: var(--fuente1);
+  font-size: 4.0rem;
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--light);
+}
+
+.menu-cards__container {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: minmax(150px, 250px);
+  grid-auto-rows: 300px;
+  place-content: center;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.menu__card {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  box-shadow: 0px 0px 24px 0px rgba(0,0,0,0.5);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.menu__card:nth-child(1) {
+  background-image: url("../img/maki.jpg");
+}
+
+.menu__card:nth-child(2) {
+  background-image: url("../img/oshizushi.jpg");
+}
+
+.menu__card:nth-child(3) {
+  background-image: url("../img/temaki.jpg");
+}
+
+.menu__card:nth-child(4) {
+  background-image: url("../img/kazari-sushi.jpg");
+}
+
+.menu__card .menu__card-info {
+  width: 100%;
+  height: 100%;
+  padding: 16px;
+  border-radius: 15px;
+  background-image: linear-gradient(to bottom, var(--secundary), rgba(0,0,0,.0));
+}
+
+.menu__card .menu__card-info .card-info__title {
+  margin-bottom: 20px;
+  font-family: var(--fuente1);
+  font-size: 4.0rem;
+  letter-spacing: .2rem;
+  color: var(--light);
+}
+
+.menu__card .menu__card-info .card-info__data {
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: var(--light);
+}
+
+/** INVITATION SECTION **/
+
+.invitation__container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 100%;
+  height: 350px;
+  margin-top: 50px;
+}
+
+.invitation__background {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #f3f3f3;
+  box-shadow: 0px 0px 24px 0px rgba(0,0,0,0.5);
+}
+
+.invitation__circle {
+  position: absolute;
+  top: calc(50% - 75px);
+  left: calc(50% - 75px);
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  text-align: center;
+  background-color: var(--primary);
+}
+
+.invitation__text {
+  position: absolute;
+  top: calc(50% - 30px);
+  left: calc(50% - 120px);
+  width: 240px;
+  height: 60px;
+  text-align: center;
+}
+
+.invitation__text p {
+  font-family: var(--fuente1);
+  font-size: 2.4rem;
+}
+
+.invitation__contact{
+  position: absolute;
+  top: 80%;
+  left: calc(50% - 100px);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 200px;
+  height: 50px;
+}
+
+.fi-brands-facebook, .fi-brands-instagram, .fi-brands-linkedin {
+  font-size: 2.6rem;
+}
+
+@media (min-width:768px){
+  .menu-cards__container {
+    grid-template-columns: repeat(2,minmax(150px, 250px));
+  }
+
+  .invitation__container {
+    margin-top: 0;
+  }
+
+  .invitation__background {
+    width: 100%;
+    height: 300px;
+  }
+
+}
